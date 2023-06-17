@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddBookController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\registerController;
@@ -29,3 +30,6 @@ Route::post('/register', [registerController::class, 'register']);
 
 Route::get('/sendemail/{email}', [emailController::class, 'send']);
 
+
+
+Route::resource('addbook', AddBookController::class);
